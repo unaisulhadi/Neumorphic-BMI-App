@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/ScreenBackground"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/_16sdp"
+    android:paddingLeft="@dimen/_6sdp"
+    android:paddingRight="@dimen/_6sdp"
+    android:paddingBottom="@dimen/_6sdp"
+    tools:context=".ui.DetailsActivity">
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <soup.neumorphism.NeumorphCardView
+            android:id="@+id/back"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:scaleType="centerInside"
+            app:neumorph_shapeAppearance="@style/CustomShapeAppearance">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/_10sdp"
+                    android:src="@drawable/ic_back_arrow"
+                    android:contentDescription="@string/back_button"/>
+
+            </LinearLayout>
+
+
+        </soup.neumorphism.NeumorphCardView>
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bmi_info"
+            style="@style/TitleTextStyle"
+            android:textSize="@dimen/_16ssp"
+            android:layout_centerInParent="true"/>
+
+        <soup.neumorphism.NeumorphCardView
+            android:id="@+id/info"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:scaleType="centerInside"
+            android:layout_alignParentEnd="true"
+            android:visibility="gone"
+            app:neumorph_shapeAppearance="@style/CustomShapeAppearance">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/_8sdp"
+                    android:src="@drawable/ic_info"
+                    android:contentDescription="@string/back_button"/>
+
+            </LinearLayout>
+
+
+        </soup.neumorphism.NeumorphCardView>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_above="@+id/shareResult"
+        android:fillViewport="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <soup.neumorphism.NeumorphCardView
+                android:id="@+id/bmiView"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_100sdp"
+                android:scaleType="centerInside"
+                android:layout_marginTop="@dimen/_12sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/minusHeight"
+                app:layout_constraintEnd_toStartOf="@+id/minusHeight"
+                app:layout_constraintStart_toStartOf="parent"
+                app:neumorph_shapeAppearance="@style/ShapeAppearance.Neumorph.CardView">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Your BMI"
+                        style="@style/RegularTextStyle"
+                        android:paddingEnd="@dimen/_8sdp"
+                        android:includeFontPadding="false"
+                        android:gravity="center_vertical|end"
+                        android:textColor="@color/yourBmiColor"
+                        android:textSize="@dimen/_14ssp"/>
+
+                    <TextView
+                        android:id="@+id/detailBmiValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="24.53"
+                        android:includeFontPadding="false"
+                        android:textSize="@dimen/_30ssp"
+                        android:fontFamily="@font/helvetica_neue_light"
+                        style="@style/RegularTextStyle"
+                        android:textColor="@color/infoColor"
+                        android:gravity="center_vertical"/>
+
+                    <TextView
+                        android:id="@+id/detailStatus"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Normal"
+                        android:includeFontPadding="false"
+                        style="@style/RegularTextStyle"
+                        android:paddingStart="@dimen/_8sdp"
+                        android:gravity="center_vertical|start"
+                        android:textColor="@color/yourBmiColor"
+                        android:textSize="@dimen/_14ssp"/>
+
+                </LinearLayout>
+
+
+            </soup.neumorphism.NeumorphCardView>
+
+
+            <soup.neumorphism.NeumorphCardView
+                android:id="@+id/bmiRangeView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="centerInside"
+                android:layout_marginTop="@dimen/_12sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/minusHeight"
+                app:layout_constraintEnd_toStartOf="@+id/minusHeight"
+                app:layout_constraintStart_toStartOf="parent"
+                app:neumorph_shapeAppearance="@style/ShapeAppearance.Neumorph.CardView">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_14sdp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="@string/less_than_16"
+                            style="@style/RegularTextStyle2"
+                            android:textColor="@color/yourBmiColor"
+                            android:layout_gravity="start"/>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="@string/severely_underweight"
+                            style="@style/RegularTextStyle2"
+                            android:gravity="end"/>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:background="#80BDBDBD"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="@string/underweight_range"
+                            style="@style/RegularTextStyle2"
+                            android:textColor="@color/yourBmiColor"
+                            android:layout_gravity="start"/>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="@string/underweight"
+                            style="@style/RegularTextStyle2"
+                            android:gravity="end"/>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:background="#80BDBDBD"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="@string/normal_range"
+                            style="@style/RegularTextStyle2"
+                            android:textColor="@color/yourBmiColor"
+                            android:layout_gravity="start"/>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="@string/normal"
+                            style="@style/RegularTextStyle2"
+                            android:gravity="end"/>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:background="#80BDBDBD"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="@string/overweight_range"
+                            style="@style/RegularTextStyle2"
+                            android:textColor="@color/yourBmiColor"
+                            android:layout_gravity="start"/>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="@string/overweight"
+                            style="@style/RegularTextStyle2"
+                            android:gravity="end"/>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:background="#80BDBDBD"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="@string/obese1_range"
+                            style="@style/RegularTextStyle2"
+                            android:textColor="@color/yourBmiColor"
+                            android:layout_gravity="start"/>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="@string/obesity_class_i"
+                            style="@style/RegularTextStyle2"
+                            android:gravity="end"/>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:background="#80BDBDBD"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="@string/obese2_range"
+                            style="@style/RegularTextStyle2"
+                            android:textColor="@color/yourBmiColor"
+                            android:layout_gravity="start"/>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="@string/obesity_class_ii"
+                            style="@style/RegularTextStyle2"
+                            android:gravity="end"/>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:background="#80BDBDBD"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="@string/greater_than_40"
+                            style="@style/RegularTextStyle2"
+                            android:textColor="@color/yourBmiColor"
+                            android:layout_gravity="start"/>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="@string/obesity_class_iii"
+                            style="@style/RegularTextStyle2"
+                            android:gravity="end"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </soup.neumorphism.NeumorphCardView>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+    <soup.neumorphism.NeumorphCardView
+        android:visibility="gone"
+        android:id="@+id/shareResult"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_60sdp"
+        android:layout_marginBottom="@dimen/_8sdp"
+        android:layout_marginStart="@dimen/_40sdp"
+        android:layout_marginEnd="@dimen/_40sdp"
+        android:clickable="true"
+        android:focusable="true"
+        app:neumorph_backgroundColor="@color/colorSecondary"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            style="@style/RegularTextStyle"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/share_result"
+            android:textColor="@color/lightColor"
+            android:textAllCaps="false" />
+    </soup.neumorphism.NeumorphCardView>
+
+</RelativeLayout>

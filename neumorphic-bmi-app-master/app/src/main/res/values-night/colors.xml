@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#19191E</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="colorSecondary">#2CA1BC</color>
+
+    <color name="lightColor">#DA000000</color>
+
+    <color name="textColorPrimary">#CBFFFFFF</color>
+    <color name="textColorSecondary">#c4747474</color>
+
+    <color name="severeUnderWeight">@color/md_blue_800</color>
+    <color name="underWeight">@color/md_blue_400</color>
+    <color name="normalWeight">@color/colorSecondary</color>
+    <color name="overWeight">@color/md_amber_600</color>
+    <color name="obesityClass1">@color/md_amber_900</color>
+    <color name="obesityClass2">@color/md_red_500</color>
+    <color name="obesityClass3">@color/md_red_800</color>
+
+    <color name="white">#DA000000</color>
+    <color name="black">#DAFFFFFF</color>
+
+    <color name="infoColor">@color/md_grey_400</color>
+    <color name="yourBmiColor">@color/md_grey_500</color>
+</resources>

@@ -1,0 +1,104 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="android:windowAnimationStyle">@style/CustomActivityAnimations</item>
+
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="CustomActivityAnimations" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/slide_in_right</item>
+        <item name="android:activityOpenExitAnimation">@anim/slide_out_left</item>
+        <item name="android:activityCloseEnterAnimation">@anim/slide_in_left</item>
+        <item name="android:activityCloseExitAnimation">@anim/slide_out_right</item>
+    </style>
+
+    <style name="ScreenBackground">
+        <item name="android:background">@color/colorPrimary</item>
+    </style>
+
+    <style name="RegularTextStyle">
+<!--        <item name="fontFamily">@font/cs_book</item>-->
+        <item name="fontFamily">@font/googlesansregular</item>
+        <item name="android:textSize">@dimen/_15ssp</item>
+        <item name="android:textColor">@color/textColorPrimary</item>
+    </style>
+
+    <style name="RegularTextStyle2">
+        <!--        <item name="fontFamily">@font/cs_book</item>-->
+        <item name="fontFamily">@font/googlesansregular</item>
+        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="android:textColor">@color/infoColor</item>
+    </style>
+
+
+    <style name="BoldTextStyle">
+<!--        <item name="fontFamily">@font/cs_medium</item>-->
+        <item name="fontFamily">@font/googlesansregular</item>
+        <item name="android:textSize">@dimen/_16ssp</item>
+        <item name="android:textColor">@color/textColorPrimary</item>
+    </style>
+
+    <style name="TitleTextStyle">
+<!--        <item name="fontFamily">@font/cs_medium</item>-->
+        <item name="fontFamily">@font/googlesansbold</item>
+        <item name="android:textSize">@dimen/_20ssp</item>
+        <item name="android:textColor">@color/textColorPrimary</item>
+    </style>
+
+
+    <style name="Widget.Neumorph.CardView" parent="android:Widget">
+        <item name="android:padding">@dimen/design_default_shadow_padding</item>
+        <item name="android:stateListAnimator">@animator/button_state_list_anim_neumorph</item>
+        <item name="neumorph_shadowElevation">6dp</item>
+        <item name="neumorph_shadowColorLight">#74FFFFFF</item>
+        <item name="neumorph_shadowColorDark">#742CA1BC</item>
+        <item name="neumorph_shapeType">flat</item>
+        <item name="neumorph_shapeAppearance">@style/ShapeAppearance.Neumorph.CardView</item>
+    </style>
+
+    <style name="Widget.Neumorph.ImageButton" parent="android:Widget">
+        <item name="android:padding">@dimen/design_default_shadow_padding</item>
+        <item name="android:stateListAnimator">@animator/button_state_list_anim_neumorph</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+        <item name="android:scaleType">center</item>
+        <item name="neumorph_shadowElevation">6dp</item>
+        <item name="neumorph_shadowColorLight">?colorShadowLight</item>
+        <item name="neumorph_shadowColorDark">?colorShadowDark</item>
+        <item name="neumorph_shapeType">flat</item>
+        <item name="neumorph_shapeAppearance">@style/ShapeAppearance.Neumorph.ImageButton</item>
+    </style>
+
+    <style name="ShapeAppearance.Neumorph.ImageButton" parent="">
+        <item name="neumorph_cornerFamily">rounded</item>
+        <item name="neumorph_cornerSize">15dp</item>
+    </style>
+
+    <style name="ShapeAppearance.Neumorph.CardView" parent="">
+        <item name="neumorph_cornerFamily">rounded</item>
+        <item name="neumorph_cornerSize">15dp</item>
+    </style>
+
+
+
+    <style name="CustomShapeAppearance">
+        <item name="neumorph_cornerFamily">rounded</item>
+        <item name="neumorph_cornerSize">@dimen/_30sdp</item>
+    </style>
+
+    <style name="CustomShapeAppearanceBMIView">
+        <item name="neumorph_cornerFamily">rounded</item>
+        <item name="neumorph_cornerSize">@dimen/_125sdp</item>
+    </style>
+
+</resources>

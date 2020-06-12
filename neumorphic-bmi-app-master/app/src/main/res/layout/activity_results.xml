@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/ScreenBackground"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/_16sdp"
+    android:paddingLeft="@dimen/_6sdp"
+    android:paddingRight="@dimen/_6sdp"
+    android:paddingBottom="@dimen/_6sdp"
+    tools:context=".ui.ResultsActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <soup.neumorphism.NeumorphCardView
+            android:id="@+id/back"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:scaleType="centerInside"
+            app:neumorph_shapeAppearance="@style/CustomShapeAppearance">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/_10sdp"
+                    android:src="@drawable/ic_back_arrow"
+                    android:contentDescription="@string/back_button"/>
+
+            </LinearLayout>
+
+
+        </soup.neumorphism.NeumorphCardView>
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bmi_results"
+            style="@style/TitleTextStyle"
+            android:textSize="@dimen/_16ssp"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@+id/toolbar"
+        android:layout_above="@id/showDetails"
+        android:gravity="center">
+
+        <soup.neumorphism.NeumorphCardView
+            android:id="@+id/bmiView"
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="@dimen/_200sdp"
+            android:scaleType="centerInside"
+            android:layout_marginBottom="@dimen/_20sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/minusHeight"
+            app:layout_constraintEnd_toStartOf="@+id/minusHeight"
+            app:layout_constraintStart_toStartOf="parent"
+            app:neumorph_shapeAppearance="@style/CustomShapeAppearanceBMIView">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <ProgressBar
+                    android:id="@+id/progress"
+                    android:layout_width="@dimen/_200sdp"
+                    android:layout_height="@dimen/_200sdp"
+                    android:indeterminate="false"
+                    android:layout_centerInParent="true"
+                    android:progressDrawable="@drawable/circular_progress_bar"
+                    android:background="@drawable/circle_shape"
+                    style="?android:attr/progressBarStyleHorizontal" />
+
+
+                <TextView
+                    android:id="@+id/tvBmiValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/temp_bmi"
+                    android:includeFontPadding="false"
+                    android:layout_centerInParent="true"
+                    style="@style/RegularTextStyle"
+                    android:textSize="@dimen/_35ssp"/>
+
+            </RelativeLayout>
+
+
+        </soup.neumorphism.NeumorphCardView>
+
+
+        <TextView
+            android:id="@+id/tvBmiStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/temp_bmi_status"
+            style="@style/RegularTextStyle"/>
+
+
+
+
+
+    </LinearLayout>
+
+    <soup.neumorphism.NeumorphCardView
+        android:id="@+id/showDetails"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_60sdp"
+        android:layout_marginBottom="@dimen/_8sdp"
+        android:layout_marginStart="@dimen/_40sdp"
+        android:layout_marginEnd="@dimen/_40sdp"
+        android:clickable="true"
+        android:focusable="true"
+        app:neumorph_backgroundColor="@color/colorSecondary"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            style="@style/RegularTextStyle"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/show_details"
+            android:textColor="@color/lightColor"
+            android:textAllCaps="false" />
+    </soup.neumorphism.NeumorphCardView>
+
+
+</RelativeLayout>

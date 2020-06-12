@@ -1,0 +1,117 @@
+<resources>
+    <string name="app_name">BMI Calculator</string>
+    <string name="bmi_results">BMI Results</string>
+    <string name="temp_bmi">15.25</string>
+    <string name="temp_bmi_status">You have Normal Body weight</string>
+    <string name="show_details">Show Details</string>
+    <string name="back_button">Back Button</string>
+    <string name="bmi_calculator">BMI Calculator</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="height">Height</string>
+    <string name="temp_height">160 cm</string>
+    <string name="weight">Weight</string>
+    <string name="temp_weight">75</string>
+    <string name="kg">kg</string>
+    <string name="age">Age</string>
+    <string name="temp_age">25</string>
+    <string name="let_s_begin">Let\'s Begin</string>
+    <string name="bmi_info">BMI Info</string>
+    <string name="less_than_16">Less than 16</string>
+    <string name="severely_underweight">Severely Underweight</string>
+    <string name="underweight">Underweight</string>
+    <string name="underweight_range">16 to 18.4</string>
+    <string name="normal_range">18.5 to 24.9</string>
+    <string name="normal">Normal</string>
+    <string name="overweight_range">25 to 29.9</string>
+    <string name="overweight">Overweight</string>
+    <string name="obese1_range">30 to 34.9</string>
+    <string name="obesity_class_i">Obesity Class I</string>
+    <string name="obese2_range">35 to 39.9</string>
+    <string name="obesity_class_ii">Obesity Class II</string>
+    <string name="obesity_class_iii">Obesity Class III</string>
+    <string name="greater_than_40">Greater than 40</string>
+    <string name="share_result">Share Result</string>
+    <string name="about">About</string>
+    <string name="aboutContent">Body mass index, or BMI, is a measure of body size. It combines a person’s weight with their height. The results of a BMI measurement can give an idea about whether a person has the correct weight for their height.
+    \n \nBMI is a screening tool that can indicate whether a person is underweight or if they have a healthy weight, excess weight, or obesity. If a person’s BMI is outside of the healthy range, their health risks may increase significantly.
+
+Carrying too much weight can lead to a variety of health conditions, such as type 2 diabetes, high blood pressure, and cardiovascular problems.
+
+A weigh that is too low can increase the risk of malnutrition, osteoporosis, and anemia. The doctor will make suitable recommendations.
+
+BMI does not measure body fat directly, and it does not account for age, sex, ethnicity, or muscle mass in adults.
+
+However, it uses standard weight status categories that can help doctors to track weight status across populations and identify potential issues in individuals.
+    \n
+    BMI of less than 18.5
+
+A BMI of less than 18.5 indicates that you are underweight, so you may need to put on some weight. You are recommended to ask your doctor or a dietitian for advice.
+
+BMI of 18.5–24.9
+
+A BMI of 18.5-24.9 indicates that you are at a healthy weight for your height. By maintaining a healthy weight, you lower your risk of developing serious health problems.
+
+BMI of 25–29.9
+
+A BMI of 25-29.9 indicates that you are slightly overweight. You may be advised to lose some weight for health reasons. You are recommended to talk to your doctor or a dietitian for advice.
+
+BMI of over 30
+
+A BMI of over 30 indicates that you are heavily overweight. Your health may be at risk if you do not lose weight. You are recommended to talk to your doctor or a dietitian for advice.
+    \n
+    How doctors use BMI
+
+BMI is not accurate enough to use as a diagnostic tool, but it can screen for potential weight problems in adults and children.
+
+If someone has a high or low BMI, a doctor or other healthcare professional might then consider other factors, such as:
+
+    skinfold thickness measurements, which indicate how much fat is in the body in adults and children
+    evaluations of diet and physical activity
+    discuss any family history of cardiovascular disease and other health problems
+    recommend other appropriate health screenings
+
+The doctor or healthcare professional can then make diet and exercise recommendations based on these results.
+    \n
+    Health risks of extra weight
+
+Excess weight has the following effects on the body:
+
+    It increases how hard the heart has to work.
+    It raises blood pressure, blood cholesterol and triglyceride levels.
+    It lowers high-density lipoprotein (HDL), or good cholesterol levels.
+    It can make diabetes and other health problems more likely.
+
+According to the National Institute of Diabetes and Digestive and Kidney Diseases (NIDDK), carrying extra weight can increase the risk of the following conditions:
+
+    hypertension, or high blood pressure
+    dyslipidemia, which involves high LDL cholesterol, low HDL cholesterol, or high levels of triglycerides
+    type 2 diabetes
+    coronary heart disease
+    stroke
+    gallbladder disease
+    osteoarthritis
+    sleep apnea and respiratory problems
+    some cancers, including endometrial, breast and colon cancer
+
+Carrying extra weight as a child or teenager can also pose significant health risks, both during childhood and into adulthood.
+
+As with adult obesity, childhood obesity increases the risk of various health problems, including cardiovascular disease, diabetes, and sleep apnea.
+
+The American Heart Association (AHA), point out that children with a high BMI also have a higher risk of:
+
+    asthma
+    low self-esteem and psychological stress
+    \n
+    Other measures of a healthy body
+
+BMI is a useful tool, but it cannot identify whether a person’s weight is made up of muscle or fat.
+
+For example, an athlete with a lot of muscle tissue may have a higher BMI than a person who is not very active. But, this does not mean that the athlete is overweight or unhealthy.
+
+In addition, cardiovascular disease and high blood pressure are more likely to occur in people who have additional fat — known as visceral fat — around their middle rather than their hips.
+
+Other measures of body size include waist-hip ratio, waist-to-height ratio, and body composition, which measures body fat and lean body mass. These measurement systems focus more on the amount of fat a person has and its distribution around the body.
+
+Together with BMI, these additional measures can help to assess more accurately the health risks associated with an individual’s weight.</string>
+</resources>
