@@ -1,5 +1,5 @@
 # Neumorphic-BMI-App
-### A simple Android Applicatio to calculate BMI
+### A simple Android Application to calculate BMI
 
 ![alt text](https://raw.githubusercontent.com/unaisulhadi/Neumorphic-BMI-App/master/infographic.jpg)
 
