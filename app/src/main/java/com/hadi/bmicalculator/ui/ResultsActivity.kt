@@ -27,8 +27,8 @@ class ResultsActivity : AppCompatActivity() {
 
     private fun init(){
 
-        var bmi_ = intent.getStringExtra("BMI_VALUE")
-        bmiValue = bmi_.toFloat()
+        val bmi_ = intent.getStringExtra("BMI_VALUE")
+        bmiValue = bmi_!!.toFloat()  // added not null
 
         //Toast.makeText(this,"$bmiValue",Toast.LENGTH_SHORT).show()
 
@@ -61,7 +61,7 @@ class ResultsActivity : AppCompatActivity() {
             val intent = Intent(this,DetailsActivity::class.java)
             intent.putExtra("BMI_VALUE",bmiValue)
             startActivity(intent)
-            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
         }
 
     }

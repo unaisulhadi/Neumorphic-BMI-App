@@ -202,14 +202,14 @@ class MainActivity : AppCompatActivity() {
                     age = valueAge.text.toString().toInt()
                     weight = valueWeight.text.toString().toInt()
 
-                    var bmi = String.format("%.02f",bmi_calc(height.toFloat(),weight.toFloat()))
+                    var bmi = bmi_calc(height.toFloat(),weight.toFloat()).toString() // replace from stringformat
 
                     //Toast.makeText(this,"$height  $weight  $age $bmi",Toast.LENGTH_SHORT).show()
 
                     val intent =Intent(this,ResultsActivity::class.java)
                     intent.putExtra("BMI_VALUE",bmi)
                     startActivity(intent)
-                    overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                    overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
                 }
             }
 
