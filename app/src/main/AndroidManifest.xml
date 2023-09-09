@@ -9,14 +9,19 @@
         android:roundIcon="@mipmap/ic_launcher_bmi_scale_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.InfoActivity"></activity>
-        <activity android:name=".ui.DetailsActivity" />
+        <activity android:name=".ui.InfoActivity"
+            android:screenOrientation="portrait"
+            android:exported="true" />
+        <activity android:name=".ui.DetailsActivity"
+            android:exported="true" />
         <activity
             android:name=".ui.ResultsActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:exported="true" />
         <activity
             android:name=".ui.SplashActivity"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

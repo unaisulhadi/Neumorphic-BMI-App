@@ -27,8 +27,10 @@ class ResultsActivity : AppCompatActivity() {
 
     private fun init(){
 
-        var bmi_ = intent.getStringExtra("BMI_VALUE")
-        bmiValue = bmi_.toFloat()
+        val bmi_ = intent.getStringExtra("BMI_VALUE")
+        if (bmi_ != null) {
+            bmiValue = bmi_.toFloat()
+        }
 
         //Toast.makeText(this,"$bmiValue",Toast.LENGTH_SHORT).show()
 
